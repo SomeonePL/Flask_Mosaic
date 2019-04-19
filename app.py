@@ -1,3 +1,6 @@
+#Created by Andrzej Skrobak
+#github.com/SomeonePL
+
 from flask import Flask, request, send_file
 import requests
 import random, re, io
