@@ -44,7 +44,7 @@ def mozaika():
     for i in range(urls_amount):
         req = requests.get(urls[i])
         image = Image.open(io.BytesIO(req.content))
-        if urls_amount == 3 or urls_amount == 2 or urls_amount == 1:
+        if urls_amount < 4:
             image = image.resize((int(width / urls_amount), height))
             mosaic.paste(image, ((int(width / urls_amount)) * i, 0))
         elif urls_amount == 5:
